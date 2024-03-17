@@ -1,4 +1,4 @@
-package io.teamplayer.vanishextensions.placeholder;
+package io.teamplayer.teamextensions.placeholder;
 
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import me.quantiom.advancedvanish.util.AdvancedVanishAPI;

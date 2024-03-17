@@ -1,6 +1,6 @@
-name: VanishExtensions
+name: TeamExtensions
 version: '${version}'
-main: io.teamplayer.vanishextensions.VanishExtensions
+main: io.teamplayer.teamextensions.TeamExtensions
 api-version: '1.20'
 dependencies:
   server:
