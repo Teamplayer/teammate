@@ -49,7 +49,6 @@ build.dependsOn shadowJar
 
 shadowJar {
     archiveClassifier.set ''
-    archiveVersion.set ''
 
     relocate 'co.aikar.commands', 'io.teamplayer.acf'
     relocate 'co.aikar.locales', 'io.teamplayer.locales'
