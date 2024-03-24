@@ -80,7 +80,7 @@ public class PickupToggleCommand extends CommonBaseCommand {
     }
 
     @Subcommand("check")
-    @Description("Check if a player can pickup items.")
+    @Description("Check if a player can pickup items")
     @Syntax("<player>")
     @CommandPermission(OTHER_PERMISSION_NODE)
     public void onCheck(Player player, OnlinePlayer target) {
@@ -95,7 +95,7 @@ public class PickupToggleCommand extends CommonBaseCommand {
     }
 
     @Subcommand("temp")
-    @Description("Temporarily enable your ability to pick up items.")
+    @Description("Temporarily enable your ability to pick up items")
     @CommandPermission(SELF_PERMISSION_NODE)
     public void onTempToggle(Player player) {
         if (pickupHandler.isPickupDisabled(player.getUniqueId())) {
