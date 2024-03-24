@@ -5,7 +5,7 @@ api-version: '1.20'
 dependencies:
   server:
     AdvancedVanish:
-      required: true
+      required: false
       load: BEFORE
     PlaceholderAPI:
       required: false

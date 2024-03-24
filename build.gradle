@@ -45,6 +45,8 @@ dependencies {
 
 def targetJavaVersion = 17
 
+build.dependsOn shadowJar
+
 shadowJar {
     archiveClassifier.set ''
 
