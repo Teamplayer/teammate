@@ -10,7 +10,7 @@ import org.bukkit.entity.Player;
 /**
  * The command to manage pickup toggling.
  */
-@CommandAlias("pickuptoggle|putoggle")
+@CommandAlias("pickup")
 public class PickupToggleCommand extends CommonBaseCommand {
 
     /**
