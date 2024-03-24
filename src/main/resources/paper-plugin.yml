@@ -1,6 +1,6 @@
-name: TeamExtensions
+name: Teammate
 version: '${version}'
-main: io.teamplayer.teamextensions.TeamExtensions
+main: io.teamplayer.teammate.Teammate
 api-version: '1.20'
 dependencies:
   server:

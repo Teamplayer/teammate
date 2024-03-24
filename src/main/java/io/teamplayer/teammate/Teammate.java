@@ -1,12 +1,12 @@
-package io.teamplayer.teamextensions;
+package io.teamplayer.teammate;
 
-import io.teamplayer.teamextensions.placeholder.SimpleVanishPlaceholder;
+import io.teamplayer.teammate.placeholder.SimpleVanishPlaceholder;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class TeamExtensions extends JavaPlugin {
+public final class Teammate extends JavaPlugin {
 
     @Override
     public void onEnable() {

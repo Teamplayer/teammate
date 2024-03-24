@@ -1,4 +1,4 @@
-package io.teamplayer.teamextensions.placeholder;
+package io.teamplayer.teammate.placeholder;
 
 /**
  * Constants for placeholder expansions.

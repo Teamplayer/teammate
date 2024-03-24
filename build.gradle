@@ -1,41 +1,61 @@
 plugins {
     id 'java'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
 }
 
 group = 'io.teamplayer'
-version = '1.0.0'
+version = '1.0.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
 
     maven {
-        name = "papermc-repo"
-        url = "https://repo.papermc.io/repository/maven-public/"
+        name = 'papermc-repo'
+        url = 'https://repo.papermc.io/repository/maven-public/'
     }
 
     maven {
-        name = "sonatype"
-        url = "https://oss.sonatype.org/content/groups/public/"
+        name = 'aikar-repo'
+        url = 'https://repo.aikar.co/content/groups/aikar/'
     }
 
     maven {
-        name = "placeholder-api"
-        url = "https://repo.extendedclip.com/content/repositories/placeholderapi/"
+        name = 'sonatype'
+        url = 'https://oss.sonatype.org/content/groups/public/'
     }
 
     maven {
-        name = "advanced-vanish"
-        url = "https://repo.repsy.io/mvn/quantiom/minecraft"
+        name = 'placeholder-api'
+        url = 'https://repo.extendedclip.com/content/repositories/placeholderapi/'
+    }
+
+    maven {
+        name = 'advanced-vanish'
+        url = 'https://repo.repsy.io/mvn/quantiom/minecraft'
     }
 }
 
 dependencies {
-    compileOnly "io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT"
-    compileOnly "me.clip:placeholderapi:2.11.4"
-    compileOnly "me.quantiom:advancedvanish:1.2.2"
+    compileOnly 'io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT'
+    compileOnly 'me.clip:placeholderapi:2.11.4'
+    compileOnly 'me.quantiom:advancedvanish:1.2.2'
+
+    implementation 'co.aikar:acf-paper:0.5.1-SNAPSHOT'
 }
 
 def targetJavaVersion = 17
+
+shadowJar {
+    archiveClassifier.set ''
+
+    relocate 'co.aikar.commands', 'io.teamplayer.acf'
+    relocate 'co.aikar.locales', 'io.teamplayer.locales'
+}
+
+artifacts {
+    shadowJar
+}
+
 java {
     def javaVersion = JavaVersion.toVersion(targetJavaVersion)
     sourceCompatibility = javaVersion
