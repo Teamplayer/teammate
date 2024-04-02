@@ -16,5 +16,3 @@ Enables players and administrators to toggle the ability to pick up items.
 Improves the display and management of claims, making it easier to view and organize protected areas. 
 
 **Dependencies:** GriefPrevention
-
-Enhance your server's functionality with **Teammate** for a better gameplay experience.
