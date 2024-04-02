@@ -1,12 +1,14 @@
 package io.teamplayer.teammate;
 
 import co.aikar.commands.PaperCommandManager;
+import io.teamplayer.teammate.claim.BetterClaimsCommand;
 import io.teamplayer.teammate.pickup.PickupHandler;
 import io.teamplayer.teammate.pickup.PickupStorage;
 import io.teamplayer.teammate.pickup.PickupToggleCommand;
 import io.teamplayer.teammate.pickup.YamlPickupStorage;
 import io.teamplayer.teammate.placeholder.SimpleVanishPlaceholder;
 import io.teamplayer.teammate.storage.YamlStringStorage;
+import me.ryanhamshire.GriefPrevention.GriefPrevention;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -33,6 +35,11 @@ public final class Teammate extends JavaPlugin {
         PickupHandler pickupHandler = new PickupHandler(this, pickupStorage);
 
         commandManager.registerCommand(new PickupToggleCommand(pickupHandler));
+
+        // register grief prevention add-on
+        if (Bukkit.getPluginManager().isPluginEnabled("GriefPrevention")) {
+            commandManager.registerCommand(new BetterClaimsCommand(this, GriefPrevention.instance));
+        }
     }
 
     /**

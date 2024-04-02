@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'io.teamplayer'
-version = '1.1.0'
+version = '1.2.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
@@ -33,15 +33,24 @@ repositories {
         name = 'advanced-vanish'
         url = 'https://repo.repsy.io/mvn/quantiom/minecraft'
     }
+
+    maven {
+        name = 'jitpack'
+        url = 'https://jitpack.io'
+    }
 }
 
 dependencies {
-    compileOnly 'io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT'
-    compileOnly 'me.clip:placeholderapi:2.11.4'
-    compileOnly 'me.quantiom:advancedvanish:1.2.2'
+    compileOnly group: 'io.papermc.paper', name: 'paper-api', version: '1.20.1-R0.1-SNAPSHOT'
 
-    implementation 'co.aikar:acf-paper:0.5.1-SNAPSHOT'
+    compileOnly group: 'me.clip', name: 'placeholderapi', version: '2.11.4'
+    compileOnly group: 'me.quantiom', name: 'advancedvanish', version: '1.2.2'
+    compileOnly group: 'com.github.GriefPrevention', name: 'GriefPrevention', version: '16.18.1'
+
+    implementation group: 'co.aikar', name: 'acf-paper', version: '0.5.1-SNAPSHOT'
+
 }
+
 
 def targetJavaVersion = 17
 

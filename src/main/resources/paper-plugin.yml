@@ -10,3 +10,6 @@ dependencies:
     PlaceholderAPI:
       required: false
       load: BEFORE
+    GriefPrevention:
+      required: false
+      load: BEFORE
