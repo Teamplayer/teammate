@@ -62,7 +62,7 @@ public class BetterClaimsCommand extends CommonBaseCommand {
 
     @Subcommand("list")
     @CommandPermission(PERMISSION_BASE_NODE + "list")
-    @Syntax("[player]")
+    @Syntax("<player>")
     @CommandCompletion("@players")
     @Description("List a player's claims")
     public void onList(CommandSender sender, OfflinePlayer target) {
