@@ -11,7 +11,7 @@ public final class PlaceholderConstants {
     /**
      * Prefix for the placeholder identifiers.
      */
-    public static final String PREFIX = "vanishextensions.";
+    public static final String PREFIX = "teammate.";
 
     /**
      * Author of placeholder expansion.
