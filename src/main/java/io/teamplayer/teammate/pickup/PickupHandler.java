@@ -3,6 +3,7 @@ package io.teamplayer.teammate.pickup;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityPickupItemEvent;
 import org.bukkit.plugin.Plugin;
@@ -84,7 +85,7 @@ public class PickupHandler {
      * Listens for entity item pickups and cancels them if needed.
      */
     public class PickupListener implements Listener {
-        @EventHandler
+        @EventHandler(priority = EventPriority.LOWEST)
         public void onPickup(EntityPickupItemEvent event) {
             if (event.getEntity() instanceof Player player) {
                 if (disabledPickups.contains(player.getUniqueId())) {
