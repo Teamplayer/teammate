@@ -55,7 +55,7 @@ public final class Teammate extends JavaPlugin {
             new SimpleVanishPlaceholder(ChatColor.translateAlternateColorCodes('&', getConfig().getString(VANISH_PATH, DEFAULT_VANISH_ICON))).register();
         }
         if (Bukkit.getPluginManager().isPluginEnabled("SuperVanish")
-                && Bukkit.getPluginManager().isPluginEnabled("PremiumVanish")) {
+                || Bukkit.getPluginManager().isPluginEnabled("PremiumVanish")) {
             new SuperVanishPlaceholder(ChatColor.translateAlternateColorCodes('&', getConfig().getString(VANISH_PATH, DEFAULT_VANISH_ICON))).register();
         }
     }

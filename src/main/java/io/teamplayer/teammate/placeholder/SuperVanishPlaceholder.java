@@ -36,7 +36,7 @@ public class SuperVanishPlaceholder extends PlaceholderExpansion {
     @Override
     public boolean canRegister() {
         return Bukkit.getPluginManager().isPluginEnabled("SuperVanish")
-                && Bukkit.getPluginManager().isPluginEnabled("PremiumVanish");
+                || Bukkit.getPluginManager().isPluginEnabled("PremiumVanish");
     }
 
     @Override
