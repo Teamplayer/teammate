@@ -14,6 +14,11 @@ public final class PlaceholderConstants {
     public static final String PREFIX = "teammate.";
 
     /**
+     * Placeholder for vanished players.
+     */
+    public static final String VANISHED_PLACEHOLDER = PREFIX + "vanished";
+
+    /**
      * Author of placeholder expansion.
      */
     public static final String AUTHOR = "Teamplayer";

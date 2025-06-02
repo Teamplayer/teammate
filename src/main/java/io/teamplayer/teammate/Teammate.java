@@ -7,6 +7,7 @@ import io.teamplayer.teammate.pickup.PickupStorage;
 import io.teamplayer.teammate.pickup.PickupToggleCommand;
 import io.teamplayer.teammate.pickup.YamlPickupStorage;
 import io.teamplayer.teammate.placeholder.SimpleVanishPlaceholder;
+import io.teamplayer.teammate.placeholder.SuperVanishPlaceholder;
 import io.teamplayer.teammate.storage.YamlStringStorage;
 import me.ryanhamshire.GriefPrevention.GriefPrevention;
 import org.bukkit.Bukkit;
@@ -21,6 +22,9 @@ public final class Teammate extends JavaPlugin {
      * File to store most data.
      */
     private final File dataFile = new File(getDataFolder(), "data.yml");
+
+    private final static String DEFAULT_VANISH_ICON = "&7[V]";
+    private final static String VANISH_PATH = "vanish-icon";
 
     @Override
     public void onEnable() {
@@ -48,7 +52,11 @@ public final class Teammate extends JavaPlugin {
     private void registerPlaceholders() {
         // register vanish placeholder(s)
         if (Bukkit.getPluginManager().isPluginEnabled("AdvancedVanish")) {
-            new SimpleVanishPlaceholder(ChatColor.translateAlternateColorCodes('&', getConfig().getString("vanish-icon", "&7[V]"))).register();
+            new SimpleVanishPlaceholder(ChatColor.translateAlternateColorCodes('&', getConfig().getString(VANISH_PATH, DEFAULT_VANISH_ICON))).register();
+        }
+        if (Bukkit.getPluginManager().isPluginEnabled("SuperVanish")
+                && Bukkit.getPluginManager().isPluginEnabled("PremiumVanish")) {
+            new SuperVanishPlaceholder(ChatColor.translateAlternateColorCodes('&', getConfig().getString(VANISH_PATH, DEFAULT_VANISH_ICON))).register();
         }
     }
 }
