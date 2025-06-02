@@ -1,5 +1,6 @@
 package io.teamplayer.teammate.placeholder;
 
+import de.myzelyam.api.vanish.VanishAPI;
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import me.quantiom.advancedvanish.util.AdvancedVanishAPI;
 import org.bukkit.Bukkit;
@@ -41,7 +42,7 @@ public class SuperVanishPlaceholder extends PlaceholderExpansion {
 
     @Override
     public String onPlaceholderRequest(Player player, String params) {
-        if (player == null || !AdvancedVanishAPI.INSTANCE.isPlayerVanished(player))
+        if (player == null || !VanishAPI.isInvisible(player))
             return "";
 
         return vanishIcon;
