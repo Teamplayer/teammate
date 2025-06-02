@@ -16,7 +16,7 @@ public class SuperVanishPlaceholder extends PlaceholderExpansion {
 
     @Override
     public String getIdentifier() {
-        return PlaceholderConstants.PREFIX + "vanished";
+        return PlaceholderConstants.VANISHED_PLACEHOLDER;
     }
 
     @Override
