@@ -1,15 +1,16 @@
 package io.teamplayer.teammate.placeholder;
 
+import de.myzelyam.api.vanish.VanishAPI;
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import me.quantiom.advancedvanish.util.AdvancedVanishAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
-public class SimpleVanishPlaceholder extends PlaceholderExpansion {
+public class SuperVanishPlaceholder extends PlaceholderExpansion {
 
     private final String vanishIcon;
 
-    public SimpleVanishPlaceholder(String vanishIcon) {
+    public SuperVanishPlaceholder(String vanishIcon) {
         this.vanishIcon = vanishIcon;
     }
 
@@ -35,12 +36,13 @@ public class SimpleVanishPlaceholder extends PlaceholderExpansion {
 
     @Override
     public boolean canRegister() {
-        return Bukkit.getPluginManager().isPluginEnabled("AdvancedVanish");
+        return Bukkit.getPluginManager().isPluginEnabled("SuperVanish")
+                || Bukkit.getPluginManager().isPluginEnabled("PremiumVanish");
     }
 
     @Override
     public String onPlaceholderRequest(Player player, String params) {
-        if (player == null || !AdvancedVanishAPI.INSTANCE.isPlayerVanished(player))
+        if (player == null || !VanishAPI.isInvisible(player))
             return "";
 
         return vanishIcon;

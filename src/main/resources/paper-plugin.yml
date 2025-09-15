@@ -13,3 +13,9 @@ dependencies:
     GriefPrevention:
       required: false
       load: BEFORE
+    SuperVanish:
+      required: false
+      load: BEFORE
+    PremiumVanish:
+      required: false
+      load: BEFORE

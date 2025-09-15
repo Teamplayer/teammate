@@ -4,10 +4,10 @@ Enhance your server with **Teammate**, a plugin that adds several miscellaneous 
 
 ## Features
 
-### Advanced Vanish Placeholder
+### Vanish Placeholder
 Allows for a customizable placeholder to appear only when a player is vanished, ideal for privacy and discreet moderation.
 
-**Dependencies:** AdvancedVanish and PlaceholderAPI.
+**Dependencies:** PlaceholderAPI and AdvancedVanish or PremiumVanish or SuperVanish.
 
 ### Pickup Toggle
 Enables players and administrators to toggle the ability to pick up items.
